@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>welcome to 17lifers</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4cff00, #00ff90, #00ffff, #0094ff);
+            animation: gradient 10s ease infinite;
+            background-size: 600% 600%;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0 50%
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center items-center">
+    <main class="w-3/6 h-2/6 shadow-2xl rounded-lg p-4 flex flex-col justify-between">
+        <div class="py-2">
+        <h1 class="text-xl">welcome to 17lifers</h1>
+        <p>Hi, my name is Ryan, and I like doing front-end web development.</p>
+        <p>I also work at Fluid Client, a Minecraft 1.8.9 PvP client. Visit the website at <a class="text-red-600 hover:text-red-700 hover:scale-150" href="https://fluidclient.ovh">fluidclient.ovh.</a></p>
+        <p>For more information, check out my <a class="text-red-600 hover:text-red-700 hover:scale-150" href="https://github.com/spetterman66">GitHub.</a></p>
+        
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://discord.gg/F38PwE4YQA">Discord</a></li>
+                <li><a href="mailto:17lifers@proton.me">Email</a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
