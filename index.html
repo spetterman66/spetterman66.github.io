@@ -11,7 +11,7 @@
         body {
             height: 100%;
             width: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
             background: -webkit-linear-gradient(315deg, #4cff00, #00ff90, #00ffff, #0094ff);
             background: -moz-linear-gradient(315deg, #4cff00, #00ff90, #00ffff, #0094ff);
             background: -o-linear-gradient(315deg, #4cff00, #00ff90, #00ffff, #0094ff);
@@ -88,20 +88,31 @@
                 background-position: 0 50%
             }
         }
+
+        @media screen and (max-width: 600px) {
+            div.responsive {
+                border-radius: initial;
+                height: 100vh;
+            }
+            body {
+                align-items: initial;
+                height: 100%;
+            }
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="flex justify-center items-center">
-    <main class="w-3/6 h-4/6 shadow-2xl rounded-xl p-6 flex flex-col justify-between text-white"
-        style="background-color: rgba(0,0,0,0.6)">
-        <div class="py-2">
-            <p>👋Hello! My name is Ryan, and I'm a professional in front-end web development.</p>
+    <div class="responsive shadow-2xl rounded-xl px-8 py-3 text-white flex flex-col justify-between" style="background-color: rgba(0,0,0,0.6)">
+        <main class="py-2">
+            <h1 class="text-2xl font-bold">👋 Hello!</h1>
+            <p> My name is Ryan, and I'm a professional in front-end web development.</p>
             <p>I am a high school student, and I have been programming for about 2 years.</p>
             <br>
             <p>Here are some of the technologies I use:</p>
             <br>
-            <ul style="list-style-type:initial">
+            <ul class="px-2" style="list-style-type:initial">
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>JavaScript</li>
@@ -114,25 +125,27 @@
             <br>
             <p>I have worked on many projects, including:</p>
             <br>
-            <ul style="list-style-type:initial;">
+            <ul class="px-2" style="list-style-type:initial;">
                 <li>Fluid Client website and socials</li>
                 <li><a href="https://github.com/copy/v86">Copy's v86</a></li>
                 <li><a href="https://github.com/devos50/qemu-ios">Martijn de Vos' qemu-ios</a></li>
             </ul>
-        </div>
-        <div>
+        </main>
+        <footer>
             <div>
-                <p>I also work at Fluid Client, a Minecraft 1.8.9 PvP client. Visit the website that I have built at <a
+                <p>I also work at Fluid Client, a Minecraft 1.8.9 PvP client. Visit the website at <a
                         class="text-green-300 hover:text-green-400 hover:scale-150"
                         href="https://fluidclient.ovh">fluidclient.ovh.</a></p>
                 <p>For more information, check out my <a class="text-green-300 hover:text-green-400 hover:scale-150"
                         href="https://github.com/spetterman66">GitHub.</a></p>
 
             </div>
+            <br>
             <div style="text-align: center;"><a href="https://discord.gg/F38PwE4YQA">Discord</a>&nbsp;|&nbsp;<a
-                    href="mailto:17lifers@proton.me">Email</a>&nbsp;|&nbsp;<a href="https://twitter.com/fluid_client">Twitter</a> </div>
-        </div>
-    </main>
+                    href="mailto:17lifers@proton.me">Email</a>&nbsp;|&nbsp;<a
+                    href="https://twitter.com/fluid_client">Twitter</a> </div>
+        </footer>
+    </div>
 </body>
 
 </html>
