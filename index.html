@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>welcome to 17lifers</title>
+    <title>My website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn all about me on this website" />
     <style>
         html,
         body {
@@ -15,13 +17,20 @@
             background: -o-linear-gradient(315deg, #4cff00, #00ff90, #00ffff, #0094ff);
             background: linear-gradient(135deg, #4cff00, #00ff90, #00ffff, #0094ff);
             -webkit-animation: gradient 10s ease infinite;
-               -moz-animation: gradient 10s ease infinite;
-                 -o-animation: gradient 10s ease infinite;
-                    animation: gradient 10s ease infinite;
-            -webkit-background-size: 600% 600%;
-               -moz-background-size: 600% 600%;
-                 -o-background-size: 600% 600%;
-                    background-size: 600% 600%;
+            -moz-animation: gradient 10s ease infinite;
+            -o-animation: gradient 10s ease infinite;
+            animation: gradient 10s ease infinite;
+            background-size: 600% 600%;
+        }
+
+        a {
+            color: rgb(134 239 172) !important;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: rgb(74 222 128) !important;
         }
 
         @-webkit-keyframes gradient {
@@ -84,23 +93,44 @@
 </head>
 
 <body class="flex justify-center items-center">
-    <main class="w-3/6 h-2/6 shadow-2xl rounded-xl p-4 flex flex-col justify-between text-white"
-        style="background-color: rgba(0,0,0,0.5)">
+    <main class="w-3/6 h-4/6 shadow-2xl rounded-xl p-6 flex flex-col justify-between text-white"
+        style="background-color: rgba(0,0,0,0.6)">
         <div class="py-2">
-            <h1 class="text-xl">welcome to 17lifers</h1>
             <p>Hi, my name is Ryan, and I like doing front-end web development.</p>
-            <p>I also work at Fluid Client, a Minecraft 1.8.9 PvP client. Visit their website at <a
-                    class="text-green-300 hover:text-green-400 hover:scale-150"
-                    href="https://fluidclient.ovh">fluidclient.ovh.</a></p>
-            <p>For more information, check out my <a class="text-green-300 hover:text-green-400 hover:scale-150"
-                    href="https://github.com/spetterman66">GitHub.</a></p>
-
+            <p>I am a high school student, and I have been programming for about 2 years.</p>
+            <br>
+            <p>Here are some of the technologies I use:</p>
+            <br>
+            <ul style="list-style-type:initial">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Bootstrap</li>
+                <li>Tailwind CSS</li>
+                <li>Tauri, the superior Electron alternative</li>
+                <li>Next.js</li>
+            </ul>
+            <br>
+            <p>I have worked on many projects, including:</p>
+            <br>
+            <ul style="list-style-type:initial;">
+                <li>Fluid Client website and socials</li>
+                <li><a href="https://github.com/copy/v86">Copy's v86</a></li>
+                <li><a href="https://github.com/devos50/qemu-ios">Martijn de Vos' qemu-ios</a></li>
+            </ul>
         </div>
         <div>
-            <ul>
-                <li><a href="https://discord.gg/F38PwE4YQA">Discord</a></li>
-                <li><a href="mailto:17lifers@proton.me">Email</a></li>
-            </ul>
+            <div>
+                <p>I also work at Fluid Client, a Minecraft 1.8.9 PvP client. Visit the website that I have built at <a
+                        class="text-green-300 hover:text-green-400 hover:scale-150"
+                        href="https://fluidclient.ovh">fluidclient.ovh.</a></p>
+                <p>For more information, check out my <a class="text-green-300 hover:text-green-400 hover:scale-150"
+                        href="https://github.com/spetterman66">GitHub.</a></p>
+
+            </div>
+            <div style="text-align: center;"><a href="https://discord.gg/F38PwE4YQA">Discord</a>&nbsp;|&nbsp;<a
+                    href="mailto:17lifers@proton.me">Email</a>&nbsp;|&nbsp;<a href="https://twitter.com/fluid_client">Twitter</a> </div>
         </div>
     </main>
 </body>

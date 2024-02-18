@@ -1,2 +1,4 @@
 # spetterman66.github.io
-17lifers' website
+This is my website.
+I hope you enjoy it.
+- Ryan
