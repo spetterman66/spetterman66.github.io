@@ -143,3 +143,28 @@ body.light {
 section.light {
     background-color: white;
 }
+#contact-content.light, #settings-content.light {
+    background-color: white;
+}
+select.light {
+    background-color: white;
+    color: black;
+}
+#share.light {
+    color: black;
+}
+#share.light:hover {
+    color: rgb(148, 148, 148);
+}
+#help.light {
+    color: black;
+}
+#help.light:hover {
+    color: rgb(148, 148, 148);
+}
+#close.light {
+    color: black;
+}
+#close.light:hover {
+    color: rgb(148, 148, 148);
+}

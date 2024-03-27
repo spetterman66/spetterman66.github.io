@@ -31,14 +31,14 @@
                 <br>
                 discord: <code>wearethelifersyetagain</code>
             </p>
-            <a onclick="contact()">close</a>
+            <a onclick="contact()" id="close">close</a>
         </div>
     </div>
     <div id="settings" style="display: none;">
         <div id="settings-content">
             <h1 id="settings-title">settings</h1>
-            <a onclick="share()">share this website</a>
-            <a onclick="help()">help</a>
+            <a onclick="share()" id="share">share this website</a>
+            <a onclick="help()" id="help">help</a>
             <div class="theme">
                 <p>theme:</p>
                 <select id="theme" onchange="changeTheme()">
@@ -47,7 +47,7 @@
                 </select>
             </div>
             <br>
-            <a onclick="settings()">close</a>
+            <a onclick="settings()" id="close">close</a>
         </div>
     </div>
     <script>
