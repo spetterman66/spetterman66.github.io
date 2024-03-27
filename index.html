@@ -1,173 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>My website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Learn all about me on this website" />
-    <style>
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden;
-            background: -webkit-linear-gradient(315deg, #4cff00, #00ff90, #00ffff, #0094ff);
-            background: -moz-linear-gradient(315deg, #4cff00, #00ff90, #00ffff, #0094ff);
-            background: -o-linear-gradient(315deg, #4cff00, #00ff90, #00ffff, #0094ff);
-            background: linear-gradient(135deg, #4cff00, #00ff90, #00ffff, #0094ff);
-            -webkit-animation: gradient 10s ease infinite;
-            -moz-animation: gradient 10s ease infinite;
-            -o-animation: gradient 10s ease infinite;
-            animation: gradient 10s ease infinite;
-            background-size: 600% 600%;
-        }
-
-        a {
-            color: rgb(134 239 172) !important;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: rgb(74 222 128) !important;
-        }
-
-        @-webkit-keyframes gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @-moz-keyframes gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @-o-keyframes gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            div.responsive {
-                border-radius: initial;
-                height: 100vh;
-            }
-
-            body {
-                align-items: initial;
-                height: 100%;
-            }
-        }
-    </style>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>my website</title>
 </head>
 
-<body class="flex justify-center items-center">
-    <div class="responsive shadow-2xl rounded-xl px-8 py-3 text-white flex flex-col justify-between"
-        style="background-color: rgba(0,0,0,0.6)">
-        <main class="py-2">
-            <h1 class="text-2xl font-bold">👋 Hello!</h1>
-            <p> My name is Ryan, and I'm a professional in front-end web development.</p>
-            <p>I am a high school student, and I have been programming for about 2 years.</p>
-            <br>
-            <p>Here are some of the technologies I use:</p>
-            <br>
-            <ul class="px-2" style="list-style-type:initial">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Bootstrap</li>
-                <li>Tailwind CSS</li>
-                <li>Tauri, the superior Electron alternative</li>
-                <li>Next.js</li>
+<body onload="initialize()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="current" id="hometext">home</a></li>
+                <li><a onclick="contact()" id="contacttext">contact</a></li>
+                <div>
+                    <li><a onclick="settings()" id="settingstext">settings</a></li>
+                </div>
             </ul>
-            <br>
-            <p>I have worked on many projects, including:</p>
-            <br>
-            <ul class="px-2" style="list-style-type:initial;">
-                <li>Fluid Client website and socials</li>
-                <li><a href="https://github.com/copy/v86">Copy's v86</a></li>
-                <li><a href="https://github.com/devos50/qemu-ios">Martijn de Vos' qemu-ios</a></li>
-            </ul>
-        </main>
-        <footer>
-            <div>
-                <p>I also work at Fluid Client, a Minecraft 1.8.9 PvP client. Visit the website at <a
-                        class="text-green-300 hover:text-green-400 hover:scale-150"
-                        href="https://fluidclient.ovh">fluidclient.ovh.</a></p>
-                <p>For more information, check out my <a class="text-green-300 hover:text-green-400 hover:scale-150"
-                        href="https://github.com/spetterman66">GitHub.</a></p>
-
+        </nav>
+    </header>
+    <div id="contact" style="display: none;">
+        <div id="contact-content">
+            <h1 id="contact-title">contact me</h1>
+            <p>you can reach me at:
+                <br>
+                email: <a href="mailto:17lifers@proton.me">17lifers@proton.me</a>
+                <br>
+                discord: <code>wearethelifersyetagain</code>
+            </p>
+            <a onclick="contact()">close</a>
+        </div>
+    </div>
+    <div id="settings" style="display: none;">
+        <div id="settings-content">
+            <h1 id="settings-title">settings</h1>
+            <a onclick="share()">share this website</a>
+            <a onclick="help()">help</a>
+            <div class="theme">
+                <p>theme:</p>
+                <select id="theme" onchange="changeTheme()">
+                    <option value="dark">dark</option>
+                    <option value="light">light</option>
+                </select>
             </div>
             <br>
-            <div style="text-align: center;"><a href="https://discord.gg/F38PwE4YQA">Discord</a>&nbsp;|&nbsp;<a
-                    href="mailto:17lifers@proton.me">Email</a>&nbsp;|&nbsp;<a
-                    href="https://twitter.com/fluid_client">Twitter</a> </div>
-        </footer>
+            <a onclick="settings()">close</a>
+        </div>
     </div>
+    <script>
+        function contact() {
+            var contact = document.getElementById("contact");
+            if (contact.style.display === "none") {
+                contact.style.display = "flex";
+            } else {
+                contact.style.display = "none";
+            }
+        }
+        function changeTheme() {
+            var theme = document.getElementById("theme").value;
+            localStorage.setItem("theme", theme);
+            if (theme === "light") {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                location.reload();
+            } else if (theme === "dark") {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                location.reload();
+            }
+        }
+        function help() {
+            alert("come on, it's not hard to use this website :P");
+        }
+        // event listener for <esc> key to close the contact or settings div
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                var contact = document.getElementById("contact");
+                var settings = document.getElementById("settings");
+                if (contact.style.display === "flex") {
+                    contact.style.display = "none";
+                }
+                if (settings.style.display === "flex") {
+                    settings.style.display = "none";
+                }
+            }
+        });
+        function share() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'windows 8-inspired website',
+                    text: 'check out this cool website!',
+                    url: window.location.href,
+                })
+                    .then(() => console.log('Successful share'))
+                    .catch((error) => console.log('Error sharing', error));
+            } else {
+                console.log('sorry, the web share api is not supported in your browser');
+            }
+        }
+        // change the text of the #contact-title every 3 seconds
+        setInterval(function () {
+            var contactTitle = document.getElementById("contact-title");
+            var contactTitles = ["contact me", "hit me up", "slide into my DMs", "shoot me an email", "reach out to me", "get in touch with me", "send me a message"];
+            // select a random title from the array
+            contactTitle.innerHTML = contactTitles[Math.floor(Math.random() * contactTitles.length)];
+        }, 3000);
+        function settings() {
+            var settings = document.getElementById("settings");
+            if (settings.style.display === "none") {
+                settings.style.display = "flex";
+            } else {
+                settings.style.display = "none";
+            }
+        }
+        // when the user clicks outside of the contact or settings div, close it
+        window.onclick = function (event) {
+            var contact = document.getElementById("contact");
+            var settings = document.getElementById("settings");
+            if (event.target == contact) {
+                contact.style.display = "none";
+            }
+            if (event.target == settings) {
+                settings.style.display = "none";
+            }
+        }
+    </script>
+    <main class="content">
+        <section id="post1" class="post">
+            <article>
+                <hgroup>
+                    <div class="post-info">
+                        <i>#1</i><i>2024-27-03</i>
+                    </div>
+                    <h1>hello, world!</h1>
+                </hgroup>
+                <p><span id="animal">meow! 😺</span></p>
+                <p>my name's Ryan, feel free to poke around my website!</p>
+                <p>this website looks and feels like a windows 8 application :D</p>
+                <p>i like the javascript programming language. reload this page and see what happens!</p>
+                <p>i like everything related to software, especially FOSS (free and open-source software).</p>
+                <p>if you'd like to submit an idea, hit me up at <a href="mailto:17lifers@proton.me"
+                        class="underline">17lifers@proton.me</a>.</p>
+                <p>stay tuned for more posts from me!</p>
+                <p>peace out! ✌️</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const animal = document.getElementById("animal");
+        const animals = ["meow! 😺", "woof! 🐶", "oink! 🐷", "quack! 🦆"]
+        // select a random animal from the array
+        animal.innerHTML = animals[Math.floor(Math.random() * animals.length)];
+    </script>
 </body>
-<!--
-    function life() {
-        var eat = 🍕
-        var sleep = 💤
-        var code = 💻
-        var coffee = ☕
-        var cat = 🐈
-        var repeat = setInterval(life, 1000)
-    }
--->
 
 </html>
-
-<!--
-If you are reading this, then you are probably a developer.
-I am a developer too, and I like to make my code look nice.
-I hope you like my code, and if you have any suggestions, please let me know via an issue or a pull request.
-
-Thanks for reading this comment, and have a great day!
-
-- Ryan
--->
