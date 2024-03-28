@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>spetterman66's rss feed</title>
+        <link>https://spetterman66.github.io</link>
+        <description>your favorite news delivered to your rss reader.</description>
+        <language>en-us</language>
+        <pubDate>Wed, 27 Mar 2024 00:00:00 GMT</pubDate>
+        <lastBuildDate>Thu, 28 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <item>
+            <title>hello, world!</title>
+            <link>https://spetterman66.github.io/#post1</link>
+            <description>first post on this blog.</description>
+            <pubDate>Wed, 27 Mar 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>what web browser do you use?</title>
+            <link>https://spetterman66.github.io/#post2</link>
+            <description>This is the second placeholder post.</description>
+            <pubDate>Thu, 28 Mar 2024 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

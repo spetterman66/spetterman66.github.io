@@ -9,6 +9,7 @@
     <script src="script.js" defer></script>
     <title>win8 (metro) inspired blog</title>
     <meta name="description" content="a blog inspired by the windows 8 metro design. feel free to poke around!">
+    <link rel="alternate" href="rss.xml" type="application/rss+xml" title="rss feed">
     <meta name="keywords" content="windows 8, metro, design, website, html, css, javascript">
     <meta name="author" content="Ryan">
     <meta name="robots" content="index, follow">
@@ -55,7 +56,8 @@
     <div id="settings" style="display: none;">
         <div id="settings-content">
             <h1 id="settings-title">settings</h1>
-            <a onclick="share()" id="share">share this website</a>
+            <a onclick="share()" id="share">share this website</a>i
+            <a onclick="rss()" id="rss">open rss feed</a>
             <a onclick="help()" id="help">help</a>
             <div class="theme">
                 <p>theme:</p>
@@ -92,6 +94,9 @@
         }
         function help() {
             alert("come on, it's not hard to use this website :P");
+        }
+        function rss() {
+            window.open("rss.xml", "_blank");
         }
         // event listener for <esc> key to close the contact or settings div
         document.addEventListener("keydown", function (event) {
@@ -163,6 +168,31 @@
                 <p>if you'd like to submit an idea, hit me up at <a href="mailto:17lifers@proton.me"
                         class="underline">17lifers@proton.me</a>.</p>
                 <p>stay tuned for more posts from me!</p>
+                <p>peace out! ✌️</p>
+            </article>
+        </section>
+        <section id="post2" class="post">
+            <article>
+                <hgroup>
+                    <div class="post-info">
+                        <i>#2</i><i>2024-28-03</i>
+                    </div>
+                    <h1>which web browser do you use?</h1>
+                </hgroup>
+                <p>the majority of the web browsers are based on Chromium, including Opera, Brave, and Microsoft Edge.</p>
+                <p>Chromium has basically won the browser war, but there are still some alternatives like Firefox (Gecko) and Safari (WebKit).</p>
+                <p>which web browser do you use? let me know!</p>
+                <ul class="list">
+                    <li>Chromium (Brave, Chromium, Chrome, Microsoft Edge (Chromium-based), Opera, Vivaldi)</li>
+                    <li>Gecko (Firefox, Waterfox, Librewolf, Pale Moon, Basilisk, SeaMonkey, Tor Browser, GNU IceCat, Iceweasel, TenFourFox)</li>
+                    <li>WebKit (Safari, Epiphany, rekonq, Midori, QupZilla/Falkon, Konqueror, Otter Browser, GNOME Web, <code>surf</code>)</li>
+                    <li>text-based (Lynx, w3m, eLinks, Links, Links2, Browsh)</li>
+                    <li>Internet Explorer (you're a legend if you still use this, as this website was designed to work on IE)</li>
+                    <li>other (Dillo, NetSurf)</li>
+                </ul>
+                <p>i'd normally tell you to comment below, but Disqus has trackers everywhere, so let's not use that.</p>
+                <p>as an alternative, you can voice your thoughts on the <a href="https://github.com/spetterman66/spetterman66.github.io/discussions/1"
+                        class="underline">GitHub Discussions</a> page.</p>
                 <p>peace out! ✌️</p>
             </article>
         </section>
