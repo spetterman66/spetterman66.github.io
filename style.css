@@ -4,7 +4,9 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    overflow-y: hidden;
+}
+body {
+    overflow: hidden;
 }
 html, body, p, h1, h2, h3, h4, h5, h6, span {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -114,14 +116,23 @@ header {
     padding-top: 30px;
     height: 85px;
 }
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1.5;
+}
+.mobile {
+    display: none;
+}
 .content {
     /* height is 100% of the viewport minus the height of the header */
     height: -webkit-calc(100% - 150px);
     height: -moz-calc(100% - 150px);
     height: calc(100% - 150px);
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     overflow-x: auto;
     overflow-y: hidden;
     display: -webkit-box;
@@ -138,6 +149,7 @@ header {
             flex-direction: row-reverse;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    transition: all 0.7s ease;
 }
 .content::-webkit-scrollbar {
     display: none;
@@ -194,6 +206,12 @@ i {
     header {
         font-size: 24px;
         padding-left: 20px;
+    }
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
     }
 }
 /* if "light" class is added to the body, change the background color */

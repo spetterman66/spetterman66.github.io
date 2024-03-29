@@ -56,7 +56,7 @@
     <div id="settings" style="display: none;">
         <div id="settings-content">
             <h1 id="settings-title">settings</h1>
-            <a onclick="share()" id="share">share this website</a>i
+            <a onclick="share()" id="share">share this website</a>
             <a onclick="rss()" id="rss">open rss feed</a>
             <a onclick="help()" id="help">help</a>
             <div class="theme">
@@ -150,8 +150,28 @@
                 settings.style.display = "none";
             }
         }
+        function alphabetical() {
+            var alphabetical = document.getElementById("alphabetical");
+            var alphabeticalItems = document.querySelectorAll("#alphabetical > li");
+
+            // sort the list items alphabetically
+
+            var items = Array.prototype.slice.call(alphabeticalItems);
+            items.sort(function (a, b) {
+                return a.textContent.localeCompare(b.textContent);
+            });
+            items.forEach(function (item) {
+                alphabetical.appendChild(item);
+            });
+        }
+        window.addEventListener('load', function () {
+            var content = document.getElementById('content');
+            content.style.left = '0';
+            content.style.opacity = '1';
+            alphabetical();
+        })
     </script>
-    <main class="content">
+    <main class="content" id="content" style="position: relative; left: 600px; opacity: 0;">
         <section id="post1" class="post">
             <article>
                 <hgroup>
@@ -161,6 +181,7 @@
                     <h1>hello, world!</h1>
                 </hgroup>
                 <p><span id="animal">meow! 😺</span></p>
+                <br>
                 <p>my name's Ryan, feel free to poke around my blog!</p>
                 <p>this website looks and feels like a windows 8 application :D</p>
                 <p>i like the javascript programming language. reload this page and see what happens!</p>
@@ -168,6 +189,7 @@
                 <p>if you'd like to submit an idea, hit me up at <a href="mailto:17lifers@proton.me"
                         class="underline">17lifers@proton.me</a>.</p>
                 <p>stay tuned for more posts from me!</p>
+                <br>
                 <p>peace out! ✌️</p>
             </article>
         </section>
@@ -177,29 +199,75 @@
                     <div class="post-info">
                         <i>#2</i><i>2024-28-03</i>
                     </div>
-                    <h1>which web browser do you use?</h1>
+                    <h1 class="desktop">which web browser do you use?</h1>
+                    <h1 class="mobile">which browser do you use?</h1>
                 </hgroup>
-                <p>the majority of the web browsers are based on Chromium, including Opera, Brave, and Microsoft Edge.</p>
-                <p>Chromium has basically won the browser war, but there are still some alternatives like Firefox (Gecko) and Safari (WebKit).</p>
+                <p>the majority of the web browsers are based on Chromium, including Opera, Brave, and Microsoft Edge.
+                </p>
+                <p>Chromium has basically won the browser war, but there are still some alternatives like Firefox
+                    (Gecko) and Safari (WebKit).</p>
                 <p>which web browser do you use? let me know!</p>
                 <ul class="list">
                     <li>Chromium (Brave, Chromium, Chrome, Microsoft Edge (Chromium-based), Opera, Vivaldi)</li>
-                    <li>Gecko (Firefox, Waterfox, Librewolf, Pale Moon, Basilisk, SeaMonkey, Tor Browser, GNU IceCat, Iceweasel, TenFourFox)</li>
-                    <li>WebKit (Safari, Epiphany, rekonq, Midori, QupZilla/Falkon, Konqueror, Otter Browser, GNOME Web, <code>surf</code>)</li>
+                    <li>Gecko (Firefox, Waterfox, Librewolf, Pale Moon, Basilisk, SeaMonkey, Tor Browser, GNU IceCat,
+                        Iceweasel, TenFourFox)</li>
+                    <li>WebKit (Safari, Epiphany, rekonq, Midori, QupZilla/Falkon, Konqueror, Otter Browser, GNOME Web,
+                        <code>surf</code>)
+                    </li>
                     <li>text-based (Lynx, w3m, eLinks, Links, Links2, Browsh)</li>
-                    <li>Internet Explorer (you're a legend if you still use this, as this website was designed to work on IE)</li>
+                    <li>Internet Explorer (you're a legend if you still use this, as this website was designed to work
+                        on IE)</li>
                     <li>other (Dillo, NetSurf)</li>
                 </ul>
-                <p>i'd normally tell you to comment below, but Disqus has trackers everywhere, so let's not use that.</p>
-                <p>as an alternative, you can voice your thoughts on the <a href="https://github.com/spetterman66/spetterman66.github.io/discussions/1"
+                <p>i'd normally tell you to comment below, but Disqus has trackers everywhere, so let's not use that.
+                </p>
+                <p>as an alternative, you can voice your thoughts on the <a
+                        href="https://github.com/spetterman66/spetterman66.github.io/discussions/1"
                         class="underline">GitHub Discussions</a> page.</p>
-                <p>peace out! ✌️</p>
+                <br>
+                <p>happy browsing! 🌐</p>
             </article>
         </section>
+        <section id="post3" class="post">
+            <article>
+                <hgroup>
+                    <div class="post-info">
+                        <i>#3</i><i>2024-29-03</i>
+                    </div>
+                    <h1 class="desktop">what's your favorite programming language?</h1>
+                    <h1 class="mobile">what's your favorite programming language?</h1>
+                </hgroup>
+                <p>programming languages are like spoken languages, but for computers.</p>
+                <p>there are many programming languages out there, but some are more popular than others.</p>
+                <p>markup languages like HTML and Markdown are not programming languages, but they are used to create
+                    websites and documents.</p>
+                <p>some popular programming languages include:</p>
+                <ul class="list" id="alphabetical">
+                    <li>Rust</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>Go</li>
+                    <li>Ruby</li>
+                    <li>Objective-C</li>
+                    <li>Swift</li>
+                    <li>Kotlin</li>
+                    <li>Automation languages (Bash, Batch, PowerShell, AppleScript)</li>
+                    <li>Assembly languages (x86, ARM, MIPS, PowerPC, SPARC, <a class="underline"
+                            href="https://en.wikipedia.org/wiki/Comparison_of_instruction_set_architectures#Instruction_sets">etc.</a>)
+                    </li>
+                </ul>
+                <p>let me know at <a href="https://github.com/spetterman66/spetterman66.github.io/discussions/2"
+                        class="underline">GitHub Discussions</a> what your favorite programming language is!</p>
+                <br>
+                <p>happy coding! 🖥️</p>
+            </article>
     </main>
     <script>
         const animal = document.getElementById("animal");
-        const animals = ["meow! 😺", "woof! 🐶", "oink! 🐷", "quack! 🦆"]
+        const animals = ["meow! 😺", "woof! 🐶", "oink! 🐷", "quack! 🦆", "hiss! 🐍", "rawr! 🦕"]
         // select a random animal from the array
         animal.innerHTML = animals[Math.floor(Math.random() * animals.length)];
     </script>

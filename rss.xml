@@ -6,7 +6,7 @@
         <description>your favorite news delivered to your rss reader.</description>
         <language>en-us</language>
         <pubDate>Wed, 27 Mar 2024 00:00:00 GMT</pubDate>
-        <lastBuildDate>Thu, 28 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 29 Mar 2024 00:00:00 GMT</lastBuildDate>
         <item>
             <title>hello, world!</title>
             <link>https://spetterman66.github.io/#post1</link>
@@ -16,8 +16,13 @@
         <item>
             <title>what web browser do you use?</title>
             <link>https://spetterman66.github.io/#post2</link>
-            <description>This is the second placeholder post.</description>
+            <description>tell which browser you use!</description>
             <pubDate>Thu, 28 Mar 2024 00:00:00 GMT</pubDate>
         </item>
+        <item>
+            <title>what's your favorite programming language?</title>
+            <link>https://spetterman66.github.io/#post3</link>
+            <description>tell what your favorite programming language is!</description>
+            <pubDate>Fri, 29 Mar 2024 00:00:00 GMT</pubDate>
     </channel>
 </rss>
