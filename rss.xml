@@ -6,7 +6,7 @@
         <description>your favorite news delivered to your rss reader.</description>
         <language>en-us</language>
         <pubDate>Wed, 27 Mar 2024 00:00:00 GMT</pubDate>
-        <lastBuildDate>Thu, 29 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 21 Sep 2024 00:00:00 GMT</lastBuildDate>
         <item>
             <title>hello, world!</title>
             <link>https://spetterman66.github.io/#post1</link>
@@ -25,5 +25,10 @@
             <description>tell what your favorite programming language is!</description>
             <pubDate>Fri, 29 Mar 2024 00:00:00 GMT</pubDate>
         </item>
+        <item>
+            <title>recent developments in the tech world #1</title>
+            <link>https://spetterman66.github.io/#post4</link>
+            <description>a summary of recent tech news.</description>
+            <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
     </channel>
 </rss>

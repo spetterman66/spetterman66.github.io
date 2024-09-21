@@ -53,6 +53,7 @@ a {
     width: 100%;
     height: 100%;
     position: fixed;
+    z-index: 999;
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     display: -webkit-box;
@@ -186,6 +187,9 @@ article {
 }
 i {
     color: rgb(148, 148, 148);
+}
+.post {
+    overflow-x: scroll;
 }
 .post-info {
     display: -webkit-box;
