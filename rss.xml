@@ -6,7 +6,7 @@
         <description>your favorite news delivered to your rss reader.</description>
         <language>en-us</language>
         <pubDate>Wed, 27 Mar 2024 00:00:00 GMT</pubDate>
-        <lastBuildDate>Sat, 21 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 7 Dec 2024 00:00:00 GMT</lastBuildDate>
         <item>
             <title>hello, world!</title>
             <link>https://spetterman66.github.io/#post1</link>
@@ -30,5 +30,10 @@
             <link>https://spetterman66.github.io/#post4</link>
             <description>a summary of recent tech news.</description>
             <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>how well does the nvidia geforce 8400 gs perform in 2024?</title>
+            <link>https://spetterman66.github.io/#post5</link>
+            <description>a couple of games tested on the nvidia geforce 8400 gs with a nice overclock</description>
     </channel>
 </rss>
