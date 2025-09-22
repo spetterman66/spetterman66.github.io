@@ -1,5 +1,7 @@
 html, body {
-    background-color: rgb(32, 32, 32); 
+    background-color: rgb(32, 32, 32);
+    background-image: url(https://cdn.donmai.us/original/65/14/__hatsune_miku_vocaloid_drawn_by_hanamoto410__6514b1cd818821361a4b03091b118be9.jpg);
+    background-position: center;
     color: white;
     height: 100%;
     width: 100%;
@@ -221,6 +223,7 @@ i {
 /* if "light" class is added to the body, change the background color */
 body.light {
     background-color: whitesmoke;
+    background-image: none;
     color: black;
 }
 #settingstext.light {
