@@ -210,8 +210,8 @@ i {
 }
 @media screen and (max-width: 800px) {
     header {
-        font-size: 24px;
-        padding-left: 20px;
+        font-size: 32px;
+        padding-left: 25px;
     }
     .mobile {
         display: block;
